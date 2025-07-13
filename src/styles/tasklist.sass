@@ -1,0 +1,45 @@
+@use './mixins.sass' as mixins
+
+.task-list
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    gap: 20px
+
+    &__item
+        display: flex
+        justify-content: space-between
+        width: 100%
+        padding: 20px 30px
+        border: 1px solid transparent
+        border-radius: 10px
+        background-color: #1a1a1a
+        transition: 0.5s
+        cursor: pointer
+
+        &:hover
+            border-color: #646cff
+
+        .task-list__content
+            display: flex
+            flex-direction: column
+            justify-content: center
+            gap: 10px
+
+            h3
+                margin: 0
+
+        .task-list__nav
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            gap: 5px
+
+            .task-list__item-button
+                @include mixins.button
+                background-color: #242424
+                color: white
+
+                &:hover
+                    color: white
