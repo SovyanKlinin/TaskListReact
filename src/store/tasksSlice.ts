@@ -42,6 +42,10 @@ const tasksSlice = createSlice({
     loadTasks: (state, action) => {
       state.tasks = action.payload;
     },
+
+    reorderTasks: (state, action) => {
+      state.tasks = action.payload;
+    }
   },
 });
 
@@ -56,6 +60,7 @@ export const {
   deleteTask,
   updateTask,
   loadTasks,
+  reorderTasks
 } = tasksSlice.actions;
 
 export default tasksSlice.reducer;
