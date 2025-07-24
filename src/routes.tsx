@@ -23,6 +23,11 @@ export const router = createBrowserRouter([
             },
 
             {
+                path: '/add',
+                element: <HomePage />,
+            },
+
+            {
                 path: '/edit/:id',
                 element: <HomePage />,
             },
