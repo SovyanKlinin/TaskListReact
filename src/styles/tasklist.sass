@@ -8,6 +8,7 @@
     gap: 20px
 
     &__item
+        position: relative
         display: flex
         justify-content: space-between
         width: 100%
@@ -21,10 +22,16 @@
         &:hover
             border-color: #646cff
 
+        .drag-handle
+            position: absolute
+            left: 7px
+            top: 7px
+
         .task-list__content
             display: flex
             flex-direction: column
             justify-content: center
+            align-items: flex-start
             gap: 10px
 
             h3

@@ -1,6 +1,8 @@
 import React from 'react';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
+import { faArrowsUpDownLeftRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface SortableItemProps {
   id: number;
@@ -25,9 +27,11 @@ export const SortableItem: React.FC<React.PropsWithChildren<SortableItemProps>> 
       ref={setNodeRef}
       style={style}
       {...attributes}
-      {...listeners}
       className="task-list__item"
     >
+      <div {...listeners} className="drag-handle">
+        <FontAwesomeIcon icon={faArrowsUpDownLeftRight} />
+      </div>
       {children}
     </div>
   );

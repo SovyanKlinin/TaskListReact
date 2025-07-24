@@ -41,6 +41,7 @@ const TaskList: React.FC = () => {
     );
 
     const editButton = (id: number) => {
+        console.log('Click!')
         setEditingTaskId(id);
         navigate(`/edit/${id}`);
     };
